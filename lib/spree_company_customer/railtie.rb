@@ -1,6 +1,6 @@
-module GemName
+module SpreeCompanyCustomer
   class Railtie < Rails::Railtie
-    initializer "gem_name.init" do |app|
+    initializer "spree_company_customer.init" do |app|
 
     end
     

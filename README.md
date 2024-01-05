@@ -1,10 +1,10 @@
-# GemName
+# SpreeCompanyCustomer
 
 ## Installation
 
 1. Add this extension to your Gemfile with this line:
         
-        gem 'gem_name', github: 'mrbrdo/gem_name'
+        gem 'spree_company_customer', github: 'mrbrdo/spree_company_customer'
 
 2. Install the gem using Bundler:
 
