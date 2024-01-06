@@ -10,6 +10,10 @@
 
         bundle install
 
-3. Restart your server
+3. Copy & run migrations
+
+        bundle exec rails g spree_company_customer:install
+
+4. Restart your server
 
         If your server was running, restart it so that it can find the assets properly.
