@@ -1,0 +1,8 @@
+en:
+  activerecord:
+    attributes:
+      spree/address:
+        company: Company name
+        company_vat_id: VAT ID
+        company_vat_registered: VAT registered
+        company_enabled: Company invoice

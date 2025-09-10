@@ -1,0 +1,8 @@
+sl-SI:
+  activerecord:
+    attributes:
+      spree/address:
+        company: Naziv podjetja
+        company_vat_id: Davčna številka
+        company_vat_registered: Zavezanec za DDV
+        company_enabled: Račun na podjetje

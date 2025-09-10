@@ -7,9 +7,6 @@ module SpreeCompanyCustomer
           base.validates :company_vat_registered, inclusion: [true, false]
 
           base.before_validation :remove_company_info, unless: :company_enabled
-
-          base.whitelisted_ransackable_attributes ||= []
-          base.whitelisted_ransackable_attributes += %w(company_enabled company_vat_id company_vat_registered)
         end
 
         def remove_company_info

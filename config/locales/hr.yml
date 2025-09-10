@@ -1,0 +1,8 @@
+hr:
+  activerecord:
+    attributes:
+      spree/address:
+        company: Naziv tvrtke
+        company_vat_id: Porezni broj
+        company_vat_registered: Registriran za PDV
+        company_enabled: Račun tvrtke

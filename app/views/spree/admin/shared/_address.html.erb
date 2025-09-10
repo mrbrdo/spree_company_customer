@@ -1,0 +1,48 @@
+<% cache spree_base_cache_scope.call(address) do %>
+  <div class="address vcard">
+    <% if address.full_name.present? %>
+      <div class="fn"><%= address.full_name %></div>
+    <% end %>
+    <% if address.company_enabled %>
+      <div class="org">
+        <%= address.company %>
+        <% if address.company_vat_id.present? %>
+          <br><%= I18n.t("activerecord.attributes.spree/address.company_vat_id") %>: <%= address.company_vat_id %>
+        <% end %>
+        <br>
+        <%= I18n.t("activerecord.attributes.spree/address.company_vat_registered") %>: <%= address.company_vat_registered ? 'DA' : 'NE' %>
+      </div>
+    <% end %>
+
+    <div class="adr">
+      <div class="street-address">
+        <div class="street-address-line">
+          <%= address.address1 %>
+        </div>
+        <% unless address.address2.blank? %>
+          <div class="street-address-line">
+            <%= address.address2 %>
+          </div>
+        <% end %>
+      </div>
+      <div class="local">
+        <span class="locality"><%= address.city %></span>
+        <span class="region"><%= address.state_text %></span>
+        <span class="postal-code"><%= address.zipcode %></span>
+        <div class="country-name"><%= address.country.try(:name) %></div>
+      </div>
+    </div>
+    <% unless address.phone.blank? %>
+      <div class="tel">
+        <span class="type"><%= Spree.t(:phone) %></span>
+        <%= address.phone %>
+      </div>
+    <% end %>
+    <% unless address.alternative_phone.blank? %>
+      <div class="alternative-phone tel">
+        <span class="type"><%= Spree.t(:alternative_phone) %></span>
+        <%= address.alternative_phone %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
