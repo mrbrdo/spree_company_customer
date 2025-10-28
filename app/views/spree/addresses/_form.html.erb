@@ -46,7 +46,7 @@
     
     <%= address_field(address_form, :company, address_id, address.require_company?) %>
 
-    <%= address_field(address_form, :company_vat_id, address_id, address.require_phone?) %>
+    <%= address_field(address_form, :company_vat_id, address_id, address.require_company?) %>
 
     <div class="form-group mb-0">
       <%= label_tag "address_company_vat_registered", class: "flex items-center gap-2 text-sm mb-4" do %>
