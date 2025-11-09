@@ -34,7 +34,7 @@
     </div>
   <% end %>
 
-  <% if address.show_company_address_field? %>
+  <% if address.respond_to?(:company_enabled) && address.show_company_address_field? %>
 
     <div class="form-group mb-0">
       <%= label_tag "address_company_enabled", class: "flex items-center gap-2 text-sm mb-4" do %>
